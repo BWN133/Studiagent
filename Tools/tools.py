@@ -15,27 +15,8 @@ import json
 from langchain_core.pydantic_v1 import BaseModel, Field
 
 
-class Diff(BaseModel):
-    """Information about a person."""
 
-    # ^ Doc-string for the entity Person.
-    # This doc-string is sent to the LLM as the description of the schema Person,
-    # and it can help to improve extraction results.
-
-    # Note that:
-    # 1. Each field is an `optional` -- this allows the model to decline to extract it!
-    # 2. Each field has a `description` -- this description is used by the LLM.
-    # Having a good description can help improve extraction results.
-    category: Literal['Correct', 'Minor Mistake', 'Conceptual Mistake', 'Logical Mistake']
-
-class EvalDiffInput(BaseModel):
-    question: str = Field(description="Description of a math problem")
-    solution: str = Field(description="Correct solution to input question")
-    answer: str = Field(description="User's answer towards the question")
-
-
-
-# @tool("Eval-Difference", args_schema=EvalDiffInput, return_direct=True)
+@tool("Eval-Difference", args_schema=schema.EvalDiffInput, return_direct=True)
 def eval(question: str, solution:str, answer: str) -> str:
     """Evaluate user's input based on question description and correct solution"""
     parser = PydanticOutputParser(pydantic_object=schema.Eval_Output)
@@ -61,12 +42,12 @@ def eval(question: str, solution:str, answer: str) -> str:
     example1 = util.build_fewshot_example("TJ ran a 10K race last Saturday. He ran the first half in 20 minutes. He completed the second half in 30 minutes. What was his average time per kilometer?",
                                          "He ran the 10 kilometers in a total of 20 + 30 = <<20+30=50>>50 minutes.\nTherefore, he ran at a pace of 50 minutes / 10 kilometers = <<50/10=5>>5 minutes per kilometer.\n#### 5<|endoftext|>",
                                          "The total time TJ ran is 20 + 30 = 50 minutes, the average time per kilometer is 10 / 50 = 0.2",
-                                         "False", "False","False","True","False","User falsely understand the concept of time per kilometer.Time per kilometer is how long time it will take for 1 kilometer instead of how far it can go in one minute"
+                                         "False","False","True","False","User falsely understand the concept of time per kilometer.Time per kilometer is how long time it will take for 1 kilometer instead of how far it can go in one minute"
                                          )
     example2 = util.build_fewshot_example("Tina makes $18.00 an hour.  If she works more than 8 hours per shift, she is eligible for overtime, which is paid by your hourly wage + 1/2 your hourly wage.  If she works 10 hours every day for 5 days, how much money does she make?", 
                                           "She works 8 hours a day for $18 per hour so she makes 8*18 = $<<8*18=144.00>>144.00 per 8-hour shift\nShe works 10 hours a day and anything over 8 hours is eligible for overtime, so she gets 10-8 = <<10-8=2>>2 hours of overtime\nOvertime is calculated as time and a half so and she makes $18/hour so her overtime pay is 18*.5 = $<<18*.5=9.00>>9.00\nHer overtime pay is 18+9 = $<<18+9=27.00>>27.00\nHer base pay is $144.00 per 8-hour shift and she works 5 days and makes 5 * $144 = $<<144*5=720.00>>720.00\nHer overtime pay is $27.00 per hour and she works 2 hours of overtime per day and makes 27*2 = $<<27*2=54.00>>54.00 in overtime pay\n2 hours of overtime pay for 5 days means she makes 54*5 = $270.00\nIn 5 days her base pay is $720.00 and she makes $270.00 in overtime pay so she makes $720 + $270 = $<<720+270=990.00>>990.00\n#### 990",
                                           "She work 5 days 10 hours so she made 5 * 8 = 40 hours in time and 5 * (10 - 8) = 10 hours overtime. In total she made 40 * 18 + 18*1.5 * 10 = 990",
-                                          "True", "False", "False", "False", "False", "User answer it correctly"
+                                          "True", "False", "False", "False", "User answer it correctly"
                                           )
     examples = str([example1, example2])
 
