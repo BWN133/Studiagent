@@ -14,10 +14,10 @@ from util import util
 import json
 from langchain_core.pydantic_v1 import BaseModel, Field
 
-@tool("Answer-Completion", args_schema=schema.Eval_Output, return_direct=True)
-def evaluate_answer_completion(question: str, answer: str) -> str:
+@tool("Answer-Completion", args_schema=schema.EvalDiffInput, return_direct=True)
+def eval_completion(question: str, answer: str) -> str:
     """Evaluate if a student's answer is complete, incomplete, or absent."""
-    parser = PydanticOutputParser(pydantic_object=schema.EvalCompletionOutput)
+    parser = PydanticOutputParser(pydantic_object=schema.Eval_Output)
     prompt = ChatPromptTemplate.from_messages(
         [
             (
@@ -26,6 +26,7 @@ def evaluate_answer_completion(question: str, answer: str) -> str:
                 "A complete answer includes both the solving process and the final result."
                 "An incomplete answer has either the process or the result but not both."
                 "An absent answer has neither the process nor the result."
+                "Here is the input question: {question}"
                 "Here is the student's answer to the question: {answer}"
                 "Please provide your evaluation."
             )
@@ -34,9 +35,9 @@ def evaluate_answer_completion(question: str, answer: str) -> str:
 
     model = ChatOpenAI(model=EVALUTAIONMODEL)
     runnable = prompt | model | parser
-    output = runnable.invoke({"question": question, "answer": answer})
+    output = runnable.invoke({"question": question, "userInput": answer})
+    print(output)
     return output
-
 
 
 @tool("Eval-Difference", args_schema=schema.EvalDiffInput, return_direct=True)
