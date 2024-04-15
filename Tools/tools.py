@@ -14,7 +14,7 @@ from util import util
 import json
 from langchain_core.pydantic_v1 import BaseModel, Field
 
-@tool("Answer-Completion", args_schema=schema.EvalDiffInput, return_direct=True)
+@tool("AnswerCompletion", args_schema=schema.EvalCompInput, return_direct=True)
 def eval_completion(question: str, answer: str) -> str:
     """Evaluate if a student's answer is complete, incomplete, or absent."""
     parser = PydanticOutputParser(pydantic_object=schema.EvalCompletion)
@@ -27,7 +27,7 @@ def eval_completion(question: str, answer: str) -> str:
                 "An incomplete answer has either the process or the result but not both."
                 "An absent answer has neither the process nor the result."
                 "Here is the input question: {question}"
-                "Here is the student's answer to the question: {answer}"
+                "Here is the student's answer to the question: {userInput}"
                 "Please provide your evaluation."
                 "Here are Few shot Examples:"
                 "{examples}"
@@ -46,9 +46,9 @@ def eval_completion(question: str, answer: str) -> str:
                                           "True", "False", "True", "It is an complete answer"
                                           )
     examples = str([example1, example2])
-    model = ChatOpenAI(model=MODEL3P5)
+    model = ChatOpenAI(model=EVALUTAIONMODEL)
     runnable = prompt | model | parser
-    output = runnable.invoke({"question": question, "userInput": answer})
+    output = runnable.invoke({"question": question, "userInput": answer,"examples":examples})
     print(output)
     return output
 
@@ -89,7 +89,7 @@ def eval(question: str, solution:str, answer: str) -> str:
                                           )
     examples = str([example1, example2])
 
-    model = ChatOpenAI(model=MODEL3P5)
+    model = ChatOpenAI(model=EVALUTAIONMODEL)
     runnable = prompt | model | parser
     output = runnable.invoke({"question": question, "solution":solution, "userInput": answer,"examples":examples})
     return output

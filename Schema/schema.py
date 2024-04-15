@@ -17,7 +17,9 @@ class EvalDiffInput(BaseModel):
     solution: str = Field(description="Correct solution to input question")
     answer: str = Field(description="User's answer towards the question")
 
-
+class EvalCompInput(BaseModel):
+    question: str = Field(description="Description of a math problem")
+    answer: str = Field(description="User's answer towards the question")
 
 class EvalCompletion(BaseModel):
         if_answer: str = Field(..., description="True if it is an answer for the question")
