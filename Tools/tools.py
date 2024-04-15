@@ -22,10 +22,12 @@ def eval_completion(question: str, answer: str) -> str:
         [
             (
                 "You are a teacher evaluating a student's written answer to a question."
+                "You will be provided with a question and user's approach"
                 "Determine if the student's answer is complete, incomplete, or absent."
                 "A complete answer includes both the solving process and the final result."
                 "An incomplete answer has either the process or the result but not both."
                 "An absent answer has neither the process nor the result."
+                "Output a dictionary indicating your judgement"
                 "Here is the input question: {question}"
                 "Here is the student's answer to the question: {userInput}"
                 "Please provide your evaluation."
