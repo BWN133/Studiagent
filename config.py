@@ -1,3 +1,3 @@
 GPT3 = "gpt-3.5-turbo-1106"
 GPT4 = "gpt-4"
-EVALUTAIONMODEL = GPT4 # tools eval difference model
+EVALUTAIONMODEL = GPT3 # tools eval difference model

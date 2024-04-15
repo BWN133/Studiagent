@@ -14,6 +14,42 @@ from util import util
 import json
 from langchain_core.pydantic_v1 import BaseModel, Field
 
+@tool("AnswerCompletion", args_schema=schema.EvalCompInput, return_direct=True)
+def eval_completion(question: str, answer: str) -> str:
+    """Evaluate if a student's answer is complete, incomplete, or absent."""
+    parser = PydanticOutputParser(pydantic_object=schema.EvalCompletion)
+    prompt = ChatPromptTemplate.from_messages(
+        [
+            (
+                "You are a teacher evaluating a student's written answer to a question."
+                "Determine if the student's answer is complete, incomplete, or absent."
+                "A complete answer includes both the solving process and the final result."
+                "An incomplete answer has either the process or the result but not both."
+                "An absent answer has neither the process nor the result."
+                "Here is the input question: {question}"
+                "Here is the student's answer to the question: {userInput}"
+                "Please provide your evaluation."
+                "Here are Few shot Examples:"
+                "{examples}"
+            )
+        ]
+    ).partial(format_instructions=parser.get_format_instructions())
+    # Build fewshot example
+    example1 = util.build_judge_example("TJ ran a 10K race last Saturday. He ran the first half in 20 minutes. He completed the second half in 30 minutes. What was his average time per kilometer?",
+                                        "TJ ate apple for lunch Saturday",
+                                        "False","False","False","It is not an answer"
+                                         )
+    example2 = util.build_judge_example("Tina makes $18.00 an hour.  If she works more than 8 hours per shift, she is eligible for overtime, which is paid by your hourly wage + 1/2 your hourly wage.  If she works 10 hours every day for 5 days, how much money does she make?",
+                                        "She work 5 days 10 hours so she made 5 * 8 = 40 hours in time and 5 * (10 - 8) = 10 hours overtime. In total she made 40 * 18 + 18*1.5 * 10 = 990",
+                                        "True", "False", "True", "It is an complete answer"
+                                          )
+    examples = str([example1, example2])
+    model = ChatOpenAI(model=EVALUTAIONMODEL)
+    runnable = prompt | model | parser
+    output = runnable.invoke({"question": question, "userInput": answer,"examples":examples})
+    print(output)
+    return output
+
 
 
 @tool("Eval-Difference", args_schema=schema.EvalDiffInput, return_direct=True)
