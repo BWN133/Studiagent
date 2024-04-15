@@ -14,7 +14,7 @@ from util import util
 import json
 from langchain_core.pydantic_v1 import BaseModel, Field
 
-@tool("AnswerCompletion", args_schema=schema.EvalCompInput, return_direct=True)
+@tool("Answer-Completion", args_schema=schema.EvalCompInput, return_direct=True)
 def eval_completion(question: str, answer: str) -> str:
     """Evaluate if a student's answer is complete, incomplete, or absent."""
     parser = PydanticOutputParser(pydantic_object=schema.EvalCompletion)
@@ -37,12 +37,12 @@ def eval_completion(question: str, answer: str) -> str:
     # Build fewshot example
     example1 = util.build_judge_example("TJ ran a 10K race last Saturday. He ran the first half in 20 minutes. He completed the second half in 30 minutes. What was his average time per kilometer?",
                                         "TJ ate apple for lunch Saturday",
-                                        "False","False","False","It is not an answer"
+                                        "True","False","False","False"
                                          )
     example2 = util.build_judge_example("Tina makes $18.00 an hour.  If she works more than 8 hours per shift, she is eligible for overtime, which is paid by your hourly wage + 1/2 your hourly wage.  If she works 10 hours every day for 5 days, how much money does she make?",
-                                        "She work 5 days 10 hours so she made 5 * 8 = 40 hours in time and 5 * (10 - 8) = 10 hours overtime. In total she made 40 * 18 + 18*1.5 * 10 = 990",
-                                        "True", "False", "True", "It is an complete answer"
-                                          )
+                                        "She work 5 days 10 hours so she made 5 * 8 = 40 hours in time and 5 * (10 - 8) = 10 hours overtime",
+                                        "False", "False", "True", "True"
+                                        )
     examples = str([example1, example2])
     model = ChatOpenAI(model=EVALUTAIONMODEL)
     runnable = prompt | model | parser
@@ -64,7 +64,7 @@ def eval(question: str, solution:str, answer: str) -> str:
             "Categorize User's approach in to categories: Logical Mistake, Conceptual Mistake, Minor Mistake, Correct"
             "If multiple mistakes is inside a question, output in order of Logical Mistake, Conceptual Mistake, Minor Mistake, Correct"
             "Output a dictionary indicating your judgement on why user make the mistake"
-            "Remenber to use double quote \" for key values"
+            "Remember to use double quote \" for key values"
             "Here is the input question: {question}"
             "Solution to the input question: {solution}"
             "User's input: {userInput}"
