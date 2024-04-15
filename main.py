@@ -15,7 +15,7 @@ def evaluate_example():
 
 def judge_example():
     question = "We have a triangle with height 10 and width 8, what is the area of it?"
-    userInput = "We have a triangle with height 10 and width 8, what is the area of it?"
+    userInput = "10 * 8 / 2 = 40"
     print("execute")
     print(tools.eval_completion.name)
     print(tools.eval_completion.description)
