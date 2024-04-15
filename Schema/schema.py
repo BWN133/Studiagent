@@ -22,8 +22,10 @@ class EvalCompInput(BaseModel):
     answer: str = Field(description="User's answer towards the question")
 
 class EvalCompletion(BaseModel):
-        if_answer: str = Field(..., description="True if it is an answer for the question")
-        incomplete: str = Field(..., description="True if the answer has either the process or the result but not both.")
-        complete: str = Field(..., description="True if the answer includes both the solving process and the final result.")
-        input_type: str = Field(..., description="Which input type? Complete, incomplete? If in complete, only has result or process?")
+    """what kind of user input: An answer? Incomplete or complete """
+    absent: str = Field(..., description="True if it is not an answer for the question")
+    no_process: str = Field(..., description="True if the answer has the result but not process.")
+    no_result: str = Field(..., description="True if the answer has the process but not result.")
+    complete: str = Field(..., description="True if the answer includes both the solving process and the final result.")
+
 
