@@ -11,7 +11,6 @@ class Eval_Output(BaseModel):
     Reasoning: str = Field(..., description="Why you categorize the user's mistake in such category")
 
 
-
 class EvalDiffInput(BaseModel):
     question: str = Field(description="Description of a math problem")
     solution: str = Field(description="Correct solution to input question")
@@ -22,10 +21,15 @@ class EvalCompInput(BaseModel):
     answer: str = Field(description="User's answer towards the question")
 
 class EvalCompletion(BaseModel):
-    """what kind of user input: An answer? Incomplete or complete """
+    """Output format for analyzing completness of answer of math word problem"""
     absent: str = Field(..., description="True if it is not an answer for the question")
     no_process: str = Field(..., description="True if the answer has the result but not process.")
     no_result: str = Field(..., description="True if the answer has the process but not result.")
     complete: str = Field(..., description="True if the answer includes both the solving process and the final result.")
 
 
+class AnswerAnalysisOutput(BaseModel):
+    """Output format for analyzing user response"""
+    instruction:str = Field(..., description="Actual instruction the agent should follow")
+    mistake_kind:str = Field(..., description="Kind of mistake user make")
+    reasoning:str = Field(..., description="Why we believe user made specific mistake?")

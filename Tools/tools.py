@@ -14,7 +14,6 @@ from util import util
 import json
 from langchain_core.pydantic_v1 import BaseModel, Field
 
-@tool("Answer-Completion", args_schema=schema.EvalCompInput, return_direct=True)
 def eval_completion(question: str, answer: str) -> str:
     """Evaluate if a student's answer is complete, incomplete, or absent."""
     parser = PydanticOutputParser(pydantic_object=schema.EvalCompletion)
@@ -54,9 +53,8 @@ def eval_completion(question: str, answer: str) -> str:
 
 
 
-@tool("Eval-Difference", args_schema=schema.EvalDiffInput, return_direct=True)
-def eval(question: str, solution:str, answer: str) -> str:
-    """Evaluate user's input based on question description and correct solution"""
+def eval(question: str, solution:str, answer: str) -> schema.Eval_Output:
+    """Evaluate user's input based on question description and correct solution and provide instruction on how to guide student"""
     parser = PydanticOutputParser(pydantic_object=schema.Eval_Output)
     prompt = ChatPromptTemplate.from_messages(
     [
@@ -93,3 +91,20 @@ def eval(question: str, solution:str, answer: str) -> str:
     runnable = prompt | model | parser
     output = runnable.invoke({"question": question, "solution":solution, "userInput": answer,"examples":examples})
     return output
+
+@tool("Answer-Analysis", args_schema=schema.EvalDiffInput, return_direct=True)
+def answer_analysis_tool(question: str, solution:str, answer: str) -> str:
+    """Evaluate user's input based on question description and correct solution and provide instruction on how to guide student"""
+    completeness: schema.EvalCompletion = eval_completion(question=question,answer=answer)
+    if completeness.no_process == "True":
+        return schema.AnswerAnalysisOutput("Ask use to explain their answer","None","None")
+    eval_result:schema.Eval_Output = eval(question=question, solution=solution,answer=answer)
+    if eval_result.Minor_Mistake:
+        return schema.AnswerAnalysisOutput("User made some trivial mistake, tell user which step they made the mistake and ask them to redo the problem again", "Minor Mistake",eval_result.Reasoning)
+    elif eval_result.Conceptual_Mistake:
+        return schema.AnswerAnalysisOutput("Correct user's misunderstanding and ask the user to do the task again","Conceptual Mistake", eval_result.Reasoning)
+    elif eval_result.Logical_Mistake:
+        return schema.AnswerAnalysisOutput("User made siginificant mistake on some step, provide hint to help user correct their mistake. Don't directly tell user the answer", "Logical Mistake",eval_result.Reasoning)
+    else:
+        return schema.AnswerAnalysisOutput("User did it right. Congrats the user!","None","None")
+    
