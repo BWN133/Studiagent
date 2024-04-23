@@ -51,9 +51,26 @@ def eval_completion(question: str, answer: str) -> str:
     print(output)
     return output
 
+# def error_resistance_Compare_Output_parser(msg: AIMessage,config: RunnableConfig):
+#     try:
+#         return Compare_Output_parser.invoke(msg, config=config)
+#     except Exception as e:
+#         raise e
+def exception_to_messages(inputs: dict) -> dict:
+    print("\nReach exception_to_messages +++++++++++++++++++++++++")
+    exception = str(inputs['exception'])
+    print("Here are the exception object *****&&&&&&&&&&&&&&&*******" + exception + "*****&&&&&&&&&&&&&&&*******")
+    # Add historical messages to the original input, so the model knows that it made a mistake with the last tool call.
+    messages = ChatPromptTemplate.from_messages ([
+        "The last call raised an exception:",
+        exception,
+        "Do not repeat mistakes and try again."
+    ])
+    inputs["last_output"] = messages
+    return inputs
 
 
-def eval(question: str, solution:str, answer: str) -> schema.Eval_Output:
+def eval(question: str, solution:str, answer: str) -> str:
     """Evaluate user's input based on question description and correct solution and provide instruction on how to guide student"""
     parser = PydanticOutputParser(pydantic_object=schema.Eval_Output)
     prompt = ChatPromptTemplate.from_messages(
@@ -61,15 +78,18 @@ def eval(question: str, solution:str, answer: str) -> schema.Eval_Output:
         (
             "You are an expert in analyzing primary school student's math mistake"
             "You will be provided with a question, the solution, and user's approach"
-            "Categorize User's approach in to categories: Logical Mistake, Conceptual Mistake, Minor Mistake, Correct"
-            "If multiple mistakes is inside a question, output in order of Logical Mistake, Conceptual Mistake, Minor Mistake, Correct"
             "Output a dictionary indicating your judgement on why user make the mistake"
             "Remember to use double quote \" for key values"
-            "Here is the input question: {question}"
-            "Solution to the input question: {solution}"
-            "User's input: {userInput}"
-            "Here are Few shot Examples:"
-            "{examples}"
+            "Please following format like the following dictionary example and please include all field: "
+            "{output_example}"
+            "Input question will be encapsulated in deliminator $$$$$"
+            "Solution to input question will be encapsulated in deliminator ~~~~~"
+            "User's Input will be encapsulated in deliminator +++++"
+            "Few shot examples will be encapsulated in deliminator !!!!!"
+            "!!!!!{examples}!!!!!"
+            "$$$$${question}$$$$$"
+            "~~~~~{solution}~~~~~"
+            "+++++{userInput}+++++"
         )
     ]
     ).partial(format_instructions=parser.get_format_instructions())
@@ -86,25 +106,31 @@ def eval(question: str, solution:str, answer: str) -> schema.Eval_Output:
                                           "True", "False", "False", "False", "User answer it correctly"
                                           )
     examples = str([example1, example2])
-
+    output_example = """ {"Correct": "False","Minor_Mistake": "False", "Conceptual_Mistake": "True", Logical_Mistake": "False", "Reasoning": "User falsely understand the concept of time per kilometer.Time per kilometer is how long time it will take for 1 kilometer instead of how far it can go in one minute"}"""
     model = ChatOpenAI(model=EVALUTAIONMODEL)
     runnable = prompt | model | parser
-    output = runnable.invoke({"question": question, "solution":solution, "userInput": answer,"examples":examples})
+    error_handling_runnable = runnable.with_fallbacks([exception_to_messages | runnable], exception_key="exception")
+    output = error_handling_runnable.invoke({"question": question, "solution":solution, "userInput": answer,"examples":examples,"output_example":output_example})
     return output
 
-@tool("Answer-Analysis", args_schema=schema.EvalDiffInput, return_direct=True)
+def answer_analysis_tool_wrapper(question: str, solution:str, answer: str)->str:
+    r = answer_analysis_tool(question=question,solution=solution,answer=answer)
+    print("answer_tool get back results: ",r)
+    return r
+
 def answer_analysis_tool(question: str, solution:str, answer: str) -> str:
     """Evaluate user's input based on question description and correct solution and provide instruction on how to guide student"""
-    completeness: schema.EvalCompletion = eval_completion(question=question,answer=answer)
-    if completeness.no_process == "True":
-        return schema.AnswerAnalysisOutput("Ask use to explain their answer","None","None")
+    print("Answer analyzes triggered")
+    # completeness: schema.EvalCompletion = eval_completion(question=question,answer=answer)
+    # if completeness.no_process == "True":
+    #     return schema.AnswerAnalysisOutput(instruction="Ask use to explain their answer",mistake_kind="None",reasoning="None")
     eval_result:schema.Eval_Output = eval(question=question, solution=solution,answer=answer)
-    if eval_result.Minor_Mistake:
-        return schema.AnswerAnalysisOutput("User made some trivial mistake, tell user which step they made the mistake and ask them to redo the problem again", "Minor Mistake",eval_result.Reasoning)
-    elif eval_result.Conceptual_Mistake:
-        return schema.AnswerAnalysisOutput("Correct user's misunderstanding and ask the user to do the task again","Conceptual Mistake", eval_result.Reasoning)
-    elif eval_result.Logical_Mistake:
-        return schema.AnswerAnalysisOutput("User made siginificant mistake on some step, provide hint to help user correct their mistake. Don't directly tell user the answer", "Logical Mistake",eval_result.Reasoning)
+    if eval_result.Minor_Mistake == "True":
+        return schema.AnswerAnalysisOutput(instruction="User made some trivial mistake, tell user which step they made the mistake and ask them to redo the problem again",mistake_kind= "Minor Mistake",reasoning=eval_result.Reasoning)
+    elif eval_result.Conceptual_Mistake == "True":
+        return schema.AnswerAnalysisOutput(instruction="Correct user's misunderstanding and ask the user to do the task again",mistake_kind="Conceptual Mistake", reasoning=eval_result.Reasoning)
+    elif eval_result.Logical_Mistake == "True":
+        return schema.AnswerAnalysisOutput(instruction="User made siginificant mistake on some step, provide hint to help user correct their mistake. Don't directly tell user the answer", mistake_kind="Logical Mistake",reasoning=eval_result.Reasoning)
     else:
-        return schema.AnswerAnalysisOutput("User did it right. Congrats the user!","None","None")
+        return schema.AnswerAnalysisOutput(instruction="User did it right. Congrats the user!",mistake_kind="None",reasoning="None")
     
