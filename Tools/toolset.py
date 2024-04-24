@@ -78,10 +78,9 @@ def eval(question: str, solution:str, answer: str) -> str:
         (
             "You are an expert in analyzing primary school student's math mistake"
             "You will be provided with a question, the solution, and user's approach"
-            "Output a dictionary indicating your judgement on why user make the mistake"
+            "Output only one dictionary like the following: {output_example}"
             "Remember to use double quote \" for key values"
-            "Please following format like the following dictionary example and please include all field: "
-            "{output_example}"
+            "please include all fields mentioned above "
             "Input question will be encapsulated in deliminator $$$$$"
             "Solution to input question will be encapsulated in deliminator ~~~~~"
             "User's Input will be encapsulated in deliminator +++++"
@@ -120,7 +119,9 @@ def answer_analysis_tool_wrapper(question: str, solution:str, answer: str)->str:
 
 def answer_analysis_tool(question: str, solution:str, answer: str) -> str:
     """Evaluate user's input based on question description and correct solution and provide instruction on how to guide student"""
-    print("Answer analyzes triggered")
+    print("Answer analyzes triggered:::::::::::::::", question)
+    print("Answer analyzes triggered:::::::::::::::", solution)
+    print("Answer analyzes triggered:::::::::::::::", answer)
     # completeness: schema.EvalCompletion = eval_completion(question=question,answer=answer)
     # if completeness.no_process == "True":
     #     return schema.AnswerAnalysisOutput(instruction="Ask use to explain their answer",mistake_kind="None",reasoning="None")

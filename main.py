@@ -1,7 +1,10 @@
 from Tools import toolset
 from dotenv import load_dotenv
 import json
+from config import *
 from Pipeline import studiagent
+from Experiment import chat_script
+from langchain_core.runnables.history import RunnableWithMessageHistory
 load_dotenv()
 def evaluate_example():
     question = "We have a triangle with height 10 and width 8, what is the area of it?"
@@ -26,7 +29,10 @@ def judge_example():
 
 if __name__ == '__main__':
     print("run")
-    studiagent.main_agent()
+    print(SAMPLEQUESTION1)
+    agent = studiagent.create_simple_agent()
+    chat_script.speech_Condition_2(agent_executor=agent)
+    
     # Prompt Question
     # recieve answer judge whether complete. If the result is correct incorrect, static print
     # judge, into chat, reasoning

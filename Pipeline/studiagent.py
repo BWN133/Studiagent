@@ -14,9 +14,65 @@ from config import *
 from dotenv import load_dotenv
 load_dotenv()
 
+def create_simple_agent():
+    # Initialize the model
+    model = ChatOpenAI(model="gpt-4")
+    
+    # Define the prompt template
+    prompt = ChatPromptTemplate.from_messages(
+        [
+            (
+                "system",
+                "You are a math teacher and trying to teach students how to solve the following question. "
+                "Remember, you will never directly tell students the answer unless they figure it out themselves."
+                "{question}"
+                "The solution of the question is"
+                "{solution}"
+                "You will be provided with user input and chat history. "
+                "Firstly, decide if the input is a question, a partial answer, a complete answer, or others. "
+                "If it is a question, identify whether it is about the problem provided. "
+                "If yes, answer the question. "
+                "If no, ask the user to stay concentrated. "
+                "If a partial answer, only confirm whether the step is correct. If yes, provide a hint of the next step instead of the correct answer. If wrong, provide a hint about how to solve the current step. "
+                "If the response is a complete answer, first judge whether the answer is correct, If yes, congrats the user"
+                "if not correct check whether user made some small mistake. For example, user mistakenly calculate 60/3 into 15 instead of 20. User has understand the essense of problem but making small mistake in calculation if so, correct the user  "
+                "if not minor mistake, check whether user made conceptual mistake that user use wrong concept or equation to solve some problem. For example, using 2*pai*r to calculate the area of a circle "
+                "if Yes Correct user's misunderstanding and ask the user to do the task again"
+                "if not concptual mistake, check whether user made logical mistake, where User's logic is completely wrong or he just don't know how to do this question."
+                "if yes, provide hint to help user correct their mistake. Don't directly tell user the answer"
+                "if not mistake mention above, respond accordingly. Just don't tell the user answer"
+                "Other than that, chat normally as long as it is related to the problem and don't directly output the question."
+            ),
+            MessagesPlaceholder(variable_name="chat_history"),
+            ("human", "{input}"),
+            MessagesPlaceholder(variable_name="agent_scratchpad"),
+        ]
+    )
+    
+    # Create the agent without tools
+    agent = create_openai_tools_agent(model, [], prompt)
+    
+    # Initialize the agent executor
+    agent_executor = AgentExecutor(agent=agent, tools=[], verbose=True)
+    
+    # Create a chat history manager
+    demo_ephemeral_chat_history_for_chain = ChatMessageHistory()
+    
+    # Define a runnable agent with message history handling
+    conversational_agent_executor = RunnableWithMessageHistory(
+        agent_executor,
+        lambda session_id: demo_ephemeral_chat_history_for_chain,
+        input_messages_key="input",
+        output_messages_key="output",
+        history_messages_key="chat_history",
+    )
+    
+    return conversational_agent_executor
 
-def main_agent():
-    model = ChatOpenAI(model="gpt-3.5-turbo-1106")
+
+def initialize_main_agent() -> RunnableWithMessageHistory:
+    # model = ChatOpenAI(model="gpt-3.5-turbo-1106")
+    model = ChatOpenAI(model = "gpt-4")
 
     prompt = ChatPromptTemplate.from_messages(
         [
@@ -66,24 +122,16 @@ def main_agent():
         output_messages_key="output",
         history_messages_key="chat_history",
     )
-    
-    conversational_agent_executor.invoke(
-        {
-            "input": "I don't know how to do this question",
-            "question": SAMPLEQUESTION1,
-            "solution": SAMPLESOLUTION1
-        },
-        {"configurable": {"session_id": "unused"}},
-    )
+    return conversational_agent_executor
 
 
-    conversational_agent_executor.invoke(
-    {
-        "input": "Okay so I guess the cost is 40 percent of p which is (40/100)*p = 2p/5? am I correct?",
-        "question": SAMPLEQUESTION1,
-        "solution": SAMPLESOLUTION1
-    },
-    {"configurable": {"session_id": "unused"}},
-    )
+    # conversational_agent_executor.invoke(
+    # {
+    #     "input": "Okay so I guess the cost is 40 percent of p which is (40/100)*p = 2p/5? am I correct?",
+    #     "question": SAMPLEQUESTION1,
+    #     "solution": SAMPLESOLUTION1
+    # },
+    # {"configurable": {"session_id": "unused"}},
+    # )
 
 

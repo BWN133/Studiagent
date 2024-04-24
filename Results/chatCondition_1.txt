@@ -1,0 +1,39 @@
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+
+
+> Entering new AgentExecutor chain...
+That's okay. Let's break down the problem step by step.
+
+Step 1: Let's call Mrs. Snyder's previous monthly income 'p'.
+Step 2: We know she used to spend 40% of her income on rent and utilities. So we can represent that as (40/100)*p or 2p/5.
+Step 3: Now her income has increased by $600, so her new income is p+$600.
+Step 4: And now only 25% of her income goes to rent and utilities which is (25/100)*(p+$600) or (p+$600)/4.
+
+Our job is to find 'p'. Based on this information, can you form an equation that we can solve for 'p'?
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+That's great! But now let's try to stay focused on solving the problem. Remember, we're trying to find 'p', Mrs. Snyder's previous monthly income. Can you form an equation using the information we have?
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+Great! Let's go back to the problem. We have two equivalent expressions for the cost of Mrs. Snyder's rent and utilities: one from her previous income and one from her current income. This gives us an equation which we can solve for 'p'. Can you write down this equation?
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+Great! Let's go back to the problem. We have two equivalent expressions for the cost of Mrs. Snyder's rent and utilities: one from her previous income and one from her current income. This gives us an equation which we can solve for 'p'. Can you write down this equation?
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+Yes, you're correct! The cost of her rent and utilities was 40% of her original income, which can be represented as 0.4x or 2x/5. Now, try to express the cost of her rent and utilities based on her current income. Remember, her current income is her original income plus $600, and the cost of her rent and utilities now takes up only 25% of her current income.
+
+> Finished chain.

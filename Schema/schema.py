@@ -13,8 +13,8 @@ class Eval_Output(BaseModel):
 
 class EvalDiffInput(BaseModel):
     question: str = Field(description="Description of a math problem")
-    solution: str = Field(description="Correct solution to input question")
-    answer: str = Field(description="User's answer towards the question")
+    solution: str = Field(description="Correct solution with complete explaination to input question")
+    answer: str = Field(description="User's complete answer including their reasoning and answer related chat history towards the question")
 
 class EvalCompInput(BaseModel):
     question: str = Field(description="Description of a math problem")
