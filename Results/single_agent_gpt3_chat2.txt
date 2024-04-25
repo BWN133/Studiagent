@@ -1,0 +1,7 @@
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+content='Hello! Do you have a question about the problem provided?'
+content="No worries! Let's break it down step by step. Do you understand what the question is asking for?"
+content="That's great, but let's focus on the math problem for now. Can you take a look at the problem and let me know if you understand what it's asking for?"
+content='Sure, feel free to come back if you have any questions or need help with the math problem!'
+content='Yes, you are correct! If her previous monthly income is represented as x, then the cost of her rent and utilities would be 40% of x, which is 0.4x. Great job! Now, can you think about how her salary increase affects this situation?'
+content="It looks like there's a small mistake in your calculation. When you solve 0.4x = (x+600) * 0.25, you should get 0.4x = 0.25x + 150. Try re-evaluating that equation and solving for x again. Let me know what you get!"

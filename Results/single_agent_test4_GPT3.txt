@@ -1,0 +1,52 @@
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+content='The equation you wrote seems a bit off. It should represent the fact that 40% of her original income was spent on rent and utilities, and after the raise, this expense decreased to 25% of her new income. Try setting up the equation using these details and see if you get the same result. Remember, the equation should represent the relationship between her original income and the increase after the raise. Keep going!'
+None
+(virtualEnv) PS C:\BowenYang_SWE\Studiagent> python .\main.py
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+content='Good job! You correctly set up the equation to solve for the previous monthly income. However, it seems like there might be a small mistake in your equation. I think it should be x + 600 = 0.25 * (x + 600) instead of 0.25 * 0.4x. Can you double-check that part?'
+None
+(virtualEnv) PS C:\BowenYang_SWE\Studiagent> python .\main.py
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+content='Great job! You set up the equation correctly, but it looks like there might be a mistake in your calculation. Take another look at the equation and see if you can simplify it further to find the value of x. Let me know what you get!'
+None
+(virtualEnv) PS C:\BowenYang_SWE\Studiagent> python .\main.py
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+content='Great effort! It looks like you made a small mistake in your equation. Check your equation again and see if you can spot the error. Remember, the equation should represent the relationship between her previous and current income and the percentage of her income spent on rent and utilities. Double check and see if you can correct it!'
+None
+(virtualEnv) PS C:\BowenYang_SWE\Studiagent> python .\main.py
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+content="Great job! You're on the right track in setting up the equation to solve for the original salary. However, it seems like there might be a small mistake in your equation. Try to recheck the equation and see if you can find where the mistake is. Remember, you want to set the cost of rent and utilities before and after the raise equal to each other. Keep up the good work!"
+None
+(virtualEnv) PS C:\BowenYang_SWE\Studiagent> python .\main.py
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+content="Great job! You're on the right track by setting up the equation. However, it looks like there might be a small mistake in setting up the equation. Take another look at the equation and make sure all the terms are in the correct places. Let me know what you come up with!"
+None
+(virtualEnv) PS C:\BowenYang_SWE\Studiagent> python .\main.py
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+content='Congrats! You have successfully set up the equation to solve for the original monthly income. However, it seems there might be a small mistake in your equation. It should be x+600 = 0.25(x+600), not 0.25*0.4x. Try re-evaluating the equation with the correct expression for the percentage of the income used for rent and utilities.'
+None
+(virtualEnv) PS C:\BowenYang_SWE\Studiagent> python .\main.py
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+content="Good effort! It looks like you made a small mistake in setting up the equation. Let's go through the steps again to make sure we have the correct equation for the problem. Remember, the cost of rent and utilities was 40 percent of her previous income, not 40 percent of the new income after the raise. Try to set up the equation using that information. Keep going!"
+None
+(virtualEnv) PS C:\BowenYang_SWE\Studiagent> python .\main.py
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+content='Great job! You set up the equation correctly, but it seems like there might be a small mistake in your calculation. I think you may want to double-check the steps you used to solve for the original salary. Keep in mind that 40 percent of the original salary should be equal to the amount she spends on rent and utilities. Take another look and see if you can spot the error.'
+None
+(virtualEnv) PS C:\BowenYang_SWE\Studiagent> python .\main.py
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+content='Good effort! It seems like you made a small mistake in setting up the equation. Try to carefully set up the equation using the given information and solve for the original salary again. Let me know if you need any hints.'
+None
+(virtualEnv) PS C:\BowenYang_SWE\Studiagent> python .\main.py
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+content='Great job! You correctly set up the equation, but it seems like there might be a small mistake in your calculation. I think there might be a slight error in your equation. Can you double-check your equation and see if you can identify where the mistake might be?'

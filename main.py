@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import json
 from config import *
 from Pipeline import studiagent
-from Experiment import chat_script
+from Experiment import chat_script,chat_script_simple
 from langchain_core.runnables.history import RunnableWithMessageHistory
 load_dotenv()
 def evaluate_example():
@@ -30,8 +30,17 @@ def judge_example():
 if __name__ == '__main__':
     print("run")
     print(SAMPLEQUESTION1)
-    agent = studiagent.create_simple_agent()
-    chat_script.speech_Condition_2(agent_executor=agent)
+
+    # Multi agent invoke test case
+    # multi_agent = studiagent.initialize_main_agent()
+    # r = chat_script.test2(agent_executor=multi_agent)
+
+
+
+    # Single_agent
+    single_agent = studiagent.create_simple_agent()
+    r = chat_script_simple.test1(single_agent)
+    print(r)
     
     # Prompt Question
     # recieve answer judge whether complete. If the result is correct incorrect, static print

@@ -1,7 +1,7 @@
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from config import *
 
-def speech_Condition_1(agent_executor:RunnableWithMessageHistory):
+def test1(agent_executor:RunnableWithMessageHistory):
     agent_executor.invoke(
         {
             "input": "I don't know how to do this",
@@ -47,7 +47,7 @@ def speech_Condition_1(agent_executor:RunnableWithMessageHistory):
         {"configurable": {"session_id": "unused"}},
     )
 
-def speech_Condition_2(agent_executor:RunnableWithMessageHistory):
+def test2(agent_executor:RunnableWithMessageHistory):
     agent_executor.invoke(
         {
             "input": "I don't know how to do this",
@@ -101,3 +101,37 @@ def speech_Condition_2(agent_executor:RunnableWithMessageHistory):
         },
         {"configurable": {"session_id": "unused"}},
     )
+
+
+def test3(agent_executor:RunnableWithMessageHistory):
+    agent_executor.invoke(
+        {
+            "input": "Assume it's original salary is x, 40 percent of the salary will be equal to 40x. After the raise, her salary become x+600 so we can write equation: 25(x+600) = 40x, here we can calculate the result is 1000",
+            "question": SAMPLEQUESTION1,
+            "solution": SAMPLESOLUTION1
+        },
+        {"configurable": {"session_id": "unused"}},
+    )
+
+
+def test4(agent_executor:RunnableWithMessageHistory):
+    agent_executor.invoke(
+        {
+            "input": "Assume it's original salary is x, 40 percent of the salary will be equal to 40x. After the raise, her salary become x+600 so we can write equation: x+600 = 0.25 *0.4x, here we can calculate the result is 1000",
+            "question": SAMPLEQUESTION1,
+            "solution": SAMPLESOLUTION1
+        },
+        {"configurable": {"session_id": "unused"}},
+    )
+
+def test5(agent_executor:RunnableWithMessageHistory):
+    agent_executor.invoke(
+        {
+            "input": "Assume it's original salary is x, 40 percent of the salary will be equal to 40x. After the raise, her salary become x+600 so we can write equation: x+600 = 0.25 *0.4x, here we can calculate the result is 5800",
+            "question": SAMPLEQUESTION1,
+            "solution": SAMPLESOLUTION1
+        },
+        {"configurable": {"session_id": "unused"}},
+    )
+
+

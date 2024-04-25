@@ -13,10 +13,9 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from config import *
 from dotenv import load_dotenv
 load_dotenv()
-
+model = ChatOpenAI(model = GPT4)
 def create_simple_agent():
     # Initialize the model
-    model = ChatOpenAI(model="gpt-4")
     
     # Define the prompt template
     prompt = ChatPromptTemplate.from_messages(
@@ -43,36 +42,18 @@ def create_simple_agent():
                 "if not mistake mention above, respond accordingly. Just don't tell the user answer"
                 "Other than that, chat normally as long as it is related to the problem and don't directly output the question."
             ),
-            MessagesPlaceholder(variable_name="chat_history"),
-            ("human", "{input}"),
-            MessagesPlaceholder(variable_name="agent_scratchpad"),
+            MessagesPlaceholder(variable_name="messages"),
         ]
     )
     
-    # Create the agent without tools
-    agent = create_openai_tools_agent(model, [], prompt)
-    
-    # Initialize the agent executor
-    agent_executor = AgentExecutor(agent=agent, tools=[], verbose=True)
-    
-    # Create a chat history manager
-    demo_ephemeral_chat_history_for_chain = ChatMessageHistory()
-    
-    # Define a runnable agent with message history handling
-    conversational_agent_executor = RunnableWithMessageHistory(
-        agent_executor,
-        lambda session_id: demo_ephemeral_chat_history_for_chain,
-        input_messages_key="input",
-        output_messages_key="output",
-        history_messages_key="chat_history",
-    )
-    
-    return conversational_agent_executor
+    pipeline = prompt | model 
+
+    return pipeline
+
 
 
 def initialize_main_agent() -> RunnableWithMessageHistory:
     # model = ChatOpenAI(model="gpt-3.5-turbo-1106")
-    model = ChatOpenAI(model = "gpt-4")
 
     prompt = ChatPromptTemplate.from_messages(
         [
