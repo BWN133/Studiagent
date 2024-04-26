@@ -33,13 +33,8 @@ To run the Studiagent chatbot, simply run agents in the main.py with:
 
 python main.py
 ```
-## Contributing
-We welcome contributions to the Studiagent project. For more information on how to contribute, please see the CONTRIBUTING.md file.
-
-
-# Acknowledgments
-The development of Studiagent was inspired by the work documented in \cite{cobbe2021gsm8k}.
-Thanks to all contributors who have helped in refining the Studiagent chatbot to better support and challenge users in their mathematical endeavors.
+# Contributing
+We welcome contributions to the Studiagent project. Please contact me if interested.
 
 # References:
 Cobbe, K., Kosaraju, V., Klimov, O., Schulman, J., Hilton,
