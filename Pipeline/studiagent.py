@@ -13,7 +13,7 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from config import *
 from dotenv import load_dotenv
 load_dotenv()
-model = ChatOpenAI(model = GPT4)
+model = ChatOpenAI(model = GPT3)
 def create_simple_agent():
     # Initialize the model
     

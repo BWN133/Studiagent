@@ -1,0 +1,916 @@
+test4
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+
+
+> Entering new AgentExecutor chain...
+Hello! It looks like you might have a math question or need some help with a problem. Feel free to ask your question or share your thoughts, and I'd be happy to assist you!
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+No problem! Let's start by taking a look at the problem and breaking it down step by step. Can you tell me which part of the problem you're having trouble with?
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': ''}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered:::::::::::::::
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'Great job! It looks like you've solved the problem correctly. Well done! If you have any more questions or need further explanation, feel free to ask.
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Remenber, you will never directly tell student the answer unless student figure it out themselves.\nMrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': "Sorry, I still don't understand"}`
+
+
+Answer analyzes triggered::::::::::::::: Remenber, you will never directly tell student the answer unless student figure it out themselves.
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Sorry, I still don't understand
+answer_tool get back results:  instruction='User made some trivial mistake, tell user which step they made the mistake and ask them to redo the problem again' mistake_kind='Minor Mistake' reasoning='User made a minor mistake while simplifying the equation 8p = 5p+$3000 and should have arrived at p = $3000 instead of $1000'
+instruction='User made some trivial mistake, tell user which step they made the mistake and ask them to redo the problem again' mistake_kind='Minor Mistake' reasoning='User made a minor mistake while simplifying the equation 8p = 5p+$3000 and should have arrived at p = $3000 instead of $1000'It looks like there was a minor mistake in your solution. While simplifying the equation 8p = 5p + $3000, you should have arrived at p = $3000 instead of $1000. Please take another look at that step and try solving the problem again. If you have any questions or need further assistance, feel free to ask!
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': "Sorry, I still don't understand"}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Sorry, I still don't understand
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'You did a great job! Congratulations on solving the problem correctly. If you have any more questions or need further assistance with similar problems, feel free to ask. Keep up the good work!
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': "Sorry, I still don't understand"}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Sorry, I still don't understand
+
+
+
+
+test5
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+
+
+> Entering new AgentExecutor chain...
+Hello! It looks like you might have a math question or need some help with a problem. Feel free to ask your question or share your thoughts, and I'd be happy to assist you!
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+No problem! Let's start by taking a look at the problem and breaking it down step by step. Can you tell me which part of the problem you're having trouble with?
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': ''}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered:::::::::::::::
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'Great job! It looks like you've solved the problem correctly. Well done! If you have any more questions or need further explanation, feel free to ask.
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Remenber, you will never directly tell student the answer unless student figure it out themselves.\nMrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': "Sorry, I still don't understand"}`
+
+
+Answer analyzes triggered::::::::::::::: Remenber, you will never directly tell student the answer unless student figure it out themselves.
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Sorry, I still don't understand
+answer_tool get back results:  instruction='User made some trivial mistake, tell user which step they made the mistake and ask them to redo the problem again' mistake_kind='Minor Mistake' reasoning='User made a minor mistake while simplifying the equation 8p = 5p+$3000 and should have arrived at p = $3000 instead of $1000'
+instruction='User made some trivial mistake, tell user which step they made the mistake and ask them to redo the problem again' mistake_kind='Minor Mistake' reasoning='User made a minor mistake while simplifying the equation 8p = 5p+$3000 and should have arrived at p = $3000 instead of $1000'It looks like there was a minor mistake in your solution. While simplifying the equation 8p = 5p + $3000, you should have arrived at p = $3000 instead of $1000. Please take another look at that step and try solving the problem again. If you have any questions or need further assistance, feel free to ask!
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': "Sorry, I still don't understand"}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Sorry, I still don't understand
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'You did a great job! Congratulations on solving the problem correctly. If you have any more questions or need further assistance with similar problems, feel free to ask. Keep up the good work!
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': "Sorry, I still don't understand"}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Sorry, I still don't understand
+
+Reach exception_to_messages +++++++++++++++++++++++++
+Here are the exception object *****&&&&&&&&&&&&&&&*******Failed to parse Eval_Output from completion {'Correct': 'False', 'Minor_Mistake': 'False', 'Conceptual_Mistake': 'True'}. Got: 2 validation errors for Eval_Output
+Logical_Mistake
+  field required (type=value_error.missing)
+Reasoning
+  field required (type=value_error.missing)*****&&&&&&&&&&&&&&&*******
+Traceback (most recent call last):
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\output_parsers\pydantic.py", line 25, in parse_result
+    return self.pydantic_object.parse_obj(json_object)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pydantic\v1\main.py", line 526, in parse_obj
+    return cls(**obj)
+           ^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pydantic\v1\main.py", line 341, in __init__
+    raise validation_error
+pydantic.v1.error_wrappers.ValidationError: 2 validation errors for Eval_Output
+Logical_Mistake
+  field required (type=value_error.missing)
+Reasoning
+  field required (type=value_error.missing)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\rey-c\OneDrive\Desktop\Homework\6998\Final_Project\Studiagent\main.py", line 36, in <module>
+    r = chat_script.test4(agent_executor=multi_agent)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\OneDrive\Desktop\Homework\6998\Final_Project\Studiagent\Experiment\chat_script.py", line 166, in test4
+    agent_executor.invoke(
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\base.py", line 4064, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\base.py", line 4064, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\base.py", line 2053, in invoke
+    input = step.invoke(
+            ^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\base.py", line 4064, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\chains\base.py", line 168, in invoke
+    raise e
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\chains\base.py", line 158, in invoke
+    self._call(inputs, run_manager=run_manager)
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\agents\agent.py", line 1391, in _call
+    next_step_output = self._take_next_step(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\agents\agent.py", line 1097, in _take_next_step
+    [
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\agents\agent.py", line 1182, in _iter_next_step
+    yield self._perform_agent_action(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\agents\agent.py", line 1204, in _perform_agent_action
+    observation = tool.run(
+                  ^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\tools.py", line 401, in run
+    raise e
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\tools.py", line 358, in run
+    self._run(*tool_args, run_manager=run_manager, **tool_kwargs)
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\tools.py", line 683, in _run
+    else self.func(*args, **kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\OneDrive\Desktop\Homework\6998\Final_Project\Studiagent\Tools\toolset.py", line 116, in answer_analysis_tool_wrapper
+    r = answer_analysis_tool(question=question,solution=solution,answer=answer)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\OneDrive\Desktop\Homework\6998\Final_Project\Studiagent\Tools\toolset.py", line 128, in answer_analysis_tool
+    eval_result:schema.Eval_Output = eval(question=question, solution=solution,answer=answer)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\OneDrive\Desktop\Homework\6998\Final_Project\Studiagent\Tools\toolset.py", line 112, in eval
+    output = error_handling_runnable.invoke({"question": question, "solution":solution, "userInput": answer,"examples":examples,"output_example":output_example})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\fallbacks.py", line 185, in invoke
+    raise first_error
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\fallbacks.py", line 167, in invoke
+    output = runnable.invoke(
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\base.py", line 2053, in invoke
+    input = step.invoke(
+            ^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\output_parsers\base.py", line 167, in invoke
+    return self._call_with_config(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\base.py", line 1246, in _call_with_config
+    context.run(
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\config.py", line 326, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\output_parsers\base.py", line 168, in <lambda>
+    lambda inner_input: self.parse_result(
+                        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\output_parsers\pydantic.py", line 29, in parse_result
+    raise OutputParserException(msg, llm_output=json_object)
+langchain_core.exceptions.OutputParserException: Failed to parse Eval_Output from completion {'Correct': 'False', 'Minor_Mistake': 'False', 'Conceptual_Mistake': 'True'}. Got: 2 validation errors for Eval_Output
+Logical_Mistake
+  field required (type=value_error.missing)
+Reasoning
+  field required (type=value_error.missing)
+PS C:\Users\rey-c\OneDrive\Desktop\Homework\6998\Final_Project\Studiagent> python main.py
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': "Assume it's original salary is x, 40 percent of the salary will be equal to 40x. After the raise, her salary become x+600 so we can write equation: x+600 = 0.25 *0.4x, here we can calculate the result is 1000!"}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Assume it's original salary is x, 40 percent of the salary will be equal to 40x. After the raise, her salary become x+600 so we can write equation: x+600 = 0.25 *0.4x, here we can calculate the result is 1000!
+
+Reach exception_to_messages +++++++++++++++++++++++++
+Here are the exception object *****&&&&&&&&&&&&&&&*******Failed to parse Eval_Output from completion {'Correct': 'False', 'Minor_Mistake': 'False', 'Conceptual_Mistake': 'True'}. Got: 2 validation errors for Eval_Output
+Logical_Mistake
+  field required (type=value_error.missing)
+Reasoning
+  field required (type=value_error.missing)*****&&&&&&&&&&&&&&&*******
+Traceback (most recent call last):
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\output_parsers\pydantic.py", line 25, in parse_result
+    return self.pydantic_object.parse_obj(json_object)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pydantic\v1\main.py", line 526, in parse_obj
+    return cls(**obj)
+           ^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pydantic\v1\main.py", line 341, in __init__
+    raise validation_error
+pydantic.v1.error_wrappers.ValidationError: 2 validation errors for Eval_Output
+Logical_Mistake
+  field required (type=value_error.missing)
+Reasoning
+  field required (type=value_error.missing)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\rey-c\OneDrive\Desktop\Homework\6998\Final_Project\Studiagent\main.py", line 36, in <module>
+    r = chat_script.test5(agent_executor=multi_agent)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\OneDrive\Desktop\Homework\6998\Final_Project\Studiagent\Experiment\chat_script.py", line 181, in test5
+    agent_executor.invoke(
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\base.py", line 4064, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\base.py", line 4064, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\base.py", line 2053, in invoke
+    input = step.invoke(
+            ^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\base.py", line 4064, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\chains\base.py", line 168, in invoke
+    raise e
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\chains\base.py", line 158, in invoke
+    self._call(inputs, run_manager=run_manager)
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\agents\agent.py", line 1391, in _call
+    next_step_output = self._take_next_step(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\agents\agent.py", line 1097, in _take_next_step
+    [
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\agents\agent.py", line 1182, in _iter_next_step
+    yield self._perform_agent_action(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\agents\agent.py", line 1204, in _perform_agent_action
+    observation = tool.run(
+                  ^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\tools.py", line 401, in run
+    raise e
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\tools.py", line 358, in run
+    self._run(*tool_args, run_manager=run_manager, **tool_kwargs)
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\tools.py", line 683, in _run
+    else self.func(*args, **kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\OneDrive\Desktop\Homework\6998\Final_Project\Studiagent\Tools\toolset.py", line 116, in answer_analysis_tool_wrapper
+    r = answer_analysis_tool(question=question,solution=solution,answer=answer)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\OneDrive\Desktop\Homework\6998\Final_Project\Studiagent\Tools\toolset.py", line 128, in answer_analysis_tool
+    eval_result:schema.Eval_Output = eval(question=question, solution=solution,answer=answer)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\OneDrive\Desktop\Homework\6998\Final_Project\Studiagent\Tools\toolset.py", line 112, in eval
+    output = error_handling_runnable.invoke({"question": question, "solution":solution, "userInput": answer,"examples":examples,"output_example":output_example})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\fallbacks.py", line 185, in invoke
+    raise first_error
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\fallbacks.py", line 167, in invoke
+    output = runnable.invoke(
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\base.py", line 2053, in invoke
+    input = step.invoke(
+            ^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\output_parsers\base.py", line 167, in invoke
+    return self._call_with_config(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\base.py", line 1246, in _call_with_config
+    context.run(
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\runnables\config.py", line 326, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain_core\output_parsers\base.py", line 168, in <lambda>
+    lambda inner_input: self.parse_result(
+                        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rey-c\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\langchain\output_parsers\pydantic.py", line 29, in parse_result
+    raise OutputParserException(msg, llm_output=json_object)
+langchain_core.exceptions.OutputParserException: Failed to parse Eval_Output from completion {'Correct': 'False', 'Minor_Mistake': 'False', 'Conceptual_Mistake': 'True'}. Got: 2 validation errors for Eval_Output
+Logical_Mistake
+  field required (type=value_error.missing)
+Reasoning
+  field required (type=value_error.missing)
+PS C:\Users\rey-c\OneDrive\Desktop\Homework\6998\Final_Project\Studiagent> python main.py
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': "Assume it's original salary is x, 40 percent of the salary will be equal to 40x. After the raise, her salary become x+600 so we can write equation: x+600 = 0.25 *0.4x, here we can calculate the result is 1000!"}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Assume it's original salary is x, 40 percent of the salary will be equal to 40x. After the raise, her salary become x+600 so we can write equation: x+600 = 0.25 *0.4x, here we can calculate the result is 1000!
+
+Reach exception_to_messages +++++++++++++++++++++++++
+Here are the exception object *****&&&&&&&&&&&&&&&*******Failed to parse Eval_Output from completion {'Correct': 'False', 'Minor_Mistake': 'False', 'Conceptual_Mistake': 'True'}. Got: 2 validation errors for Eval_Output
+Logical_Mistake
+  field required (type=value_error.missing)
+Reasoning
+  field required (type=value_error.missing)*****&&&&&&&&&&&&&&&*******
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'Great job! You've got the correct answer! Well done! If you have any more questions or need further assistance, feel free to ask.
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': "Assume it's original salary is x, 40 percent of the salary will be equal to 40x. After the raise, her salary become x+600 so we can write equation: x+600 = 0.25 *0.4x, here we can calculate the result is 1000!"}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Assume it's original salary is x, 40 percent of the salary will be equal to 40x. After the raise, her salary become x+600 so we can write equation: x+600 = 0.25 *0.4x, here we can calculate the result is 1000!
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'You've got it! Well done! If you have any more questions or need further assistance, feel free to ask.
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': "The result is 1000! I think it is perfect, I don't where to improve"}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: The result is 1000! I think it is perfect, I don't where to improve
+
+Reach exception_to_messages +++++++++++++++++++++++++
+Here are the exception object *****&&&&&&&&&&&&&&&*******Failed to parse Eval_Output from completion {'Correct': 'False', 'Minor_Mistake': 'False', 'Conceptual_Mistake': 'True'}. Got: 2 validation errors for Eval_Output
+Logical_Mistake
+  field required (type=value_error.missing)
+Reasoning
+  field required (type=value_error.missing)*****&&&&&&&&&&&&&&&*******
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'You did a fantastic job! Your solution is perfect. Well done! If you have any more questions or need further assistance, feel free to ask.
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': "Assume it's original salary is x, 40 percent of the salary will be equal to 40x. After the raise, her salary become x+600 so we can write equation: x+600 = 0.25 *0.4x, here we can calculate the result is 1000!"}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Assume it's original salary is x, 40 percent of the salary will be equal to 40x. After the raise, her salary become x+600 so we can write equation: x+600 = 0.25 *0.4x, here we can calculate the result is 1000!
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'You're absolutely correct! Great work! If you have any more questions or need further assistance, feel free to ask.
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': "The result is 1000! I think it is perfect, I don't where to improve"}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: The result is 1000! I think it is perfect, I don't where to improve
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'You are correct! The answer is indeed $1000. Great job! If you have any more questions or need further assistance, feel free to ask.
+
+> Finished chain.
+None
+
+
+
+test6
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': 'Let her previous monthly income be pThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000. Dividing both sides by 3 gives p = $1000'}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be pThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000. Dividing both sides by 3 gives p = $1000
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'Well done! You've solved it correctly. Great job!
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': 'Let her previous monthly income be pThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000. Dividing both sides by 3 gives p = $1000'}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be pThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000. Dividing both sides by 3 gives p = $1000
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'You did it right! Great work! If you have any more questions or need further assistance, feel free to ask.
+
+> Finished chain.
+None
+
+
+
+
+
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': 'Let her previous monthly income be pThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000. Dividing both sides by 3 gives p = $1000'}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be pThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000. Dividing both sides by 3 gives p = $1000
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'Well done! You've solved it correctly. Great job!
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': 'Let her previous monthly income be pThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000. Dividing both sides by 3 gives p = $1000'}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be pThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000. Dividing both sides by 3 gives p = $1000
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'You did it right! Great work! If you have any more questions or need further assistance, feel free to ask.
+
+> Finished chain.
+None
+PS C:\Users\rey-c\OneDrive\Desktop\Homework\6998\Final_Project\Studiagent> python main.py
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000\n', 'answer': 'Let her previous monthly income be pThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000. Dividing both sides by 3 gives p = $1000'}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be pThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000. Dividing both sides by 3 gives p = $1000
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'Well done! You've solved it correctly. Great job!
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000. Dividing both sides by 3 gives p = $1000', 'answer': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000. Dividing both sides by 3 gives p = $1000'}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000. Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000. Dividing both sides by 3 gives p = $1000
+
+Reach exception_to_messages +++++++++++++++++++++++++
+Here are the exception object *****&&&&&&&&&&&&&&&*******Failed to parse Eval_Output from completion {'Correct': 'True', 'Minor_Mistake': 'False', 'Conceptual_Mistake': 'False'}. Got: 2 validation errors for Eval_Output
+Logical_Mistake
+  field required (type=value_error.missing)
+Reasoning
+  field required (type=value_error.missing)*****&&&&&&&&&&&&&&&*******
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'You did it right! Congratulations! If you have any more questions or need further assistance, feel free to ask.
+
+> Finished chain.
+None
+
+
+
+
+
+test7
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': 'The answer is 1000'}`
+
+
+Answer analyzes triggered::::::::::::::: Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: The answer is 1000
+
+Reach exception_to_messages +++++++++++++++++++++++++
+Here are the exception object *****&&&&&&&&&&&&&&&*******Failed to parse Eval_Output from completion {'Correct': 'True', 'Minor_Mistake': 'False', 'Conceptual_Mistake': 'False'}. Got: 2 validation errors for Eval_Output
+Logical_Mistake
+  field required (type=value_error.missing)
+Reasoning
+  field required (type=value_error.missing)*****&&&&&&&&&&&&&&&*******
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'Well done! You got it right! Keep up the good work! If you have any other questions or need further assistance, feel free to ask.
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Remenber, you will never directly tell student the answer unless student figure it out themselves\nMrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': 'The answer is 1000'}`
+
+
+Answer analyzes triggered::::::::::::::: Remenber, you will never directly tell student the answer unless student figure it out themselves
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: The answer is 1000
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'You did it right! Congratulations! If you have any more questions or need further assistance, feel free to ask.
+
+> Finished chain.
+None
+
+
+
+test8
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+
+
+> Entering new AgentExecutor chain...
+I'm sorry to hear that. If you'd like to talk about it, I'm here to listen. Remember, it's okay to take a break and focus on yourself. If you're ready to continue with the math problem, I'm here to help with that too.
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+I'm here to help with math problems and provide support with that. If there's anything specific you'd like to discuss related to the math problem, feel free to share it. If you'd like to take a break from the problem and talk about something else, we can do that too. Just let me know how you'd like to proceed.
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+It sounds like you're going through a tough time. Relationships can be challenging, and it's important to take care of yourself during difficult moments. If there's anything you'd like to share or discuss further, feel free to do so. I'm here to listen and support you. If you'd like to continue with the math problem or if there's anything else you'd'd like to talk about, let me know.
+
+> Finished chain.
+None
+
+
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+
+
+> Entering new AgentExecutor chain...
+I'm sorry to hear that. Breakups can be tough. If you need to talk about it or if there's anything I can do to help, feel free to share. Remember, I'm here to support you.
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+I'm here to help you with any math-related questions or problems you may have. If you'd like to talk about something else or if you have any questions about the math problem provided, feel free to share.
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+It sounds like you're going through a tough time. It's important to take care of yourself and prioritize your well-being. If you need to talk or if there's anything specific you'd like to discuss, I'm here to listen. Remember that you're not alone, and it's okay to seek support during difficult times.
+
+> Finished chain.
+None
+
+
+
+
+
+test9
+run
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+
+
+> Entering new AgentExecutor chain...
+I understand that you're feeling a bit lost, but let's try to focus on the problem at hand. Can you tell me where you're currently stuck, or if you have any specific questions about the problem?
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Remenber, you will never directly tell student the answer unless student figure it out themselves\n\nMrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': ''}`
+
+
+Answer analyzes triggered::::::::::::::: Remenber, you will never directly tell student the answer unless student figure it out themselves
+
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered:::::::::::::::
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'Well done! You've got it right. Great job! If you have any more questions or need further assistance with anything else, feel free to ask.
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Remenber, you will never directly tell student the answer unless student figure it out themselves. Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': 'Yes, I understand how to solve it now. Her previous monthly income was $1000.'}`
+
+
+Answer analyzes triggered::::::::::::::: Remenber, you will never directly tell student the answer unless student figure it out themselves. Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: Yes, I understand how to solve it now. Her previous monthly income was $1000.
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'You've got it! Well done! If there's anything else you need help with, feel free to ask. Great job!
+
+> Finished chain.
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `answer_analyzer` with `{'question': 'Remenber, you will never directly tell student the answer unless student figure it out themselves. Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?', 'solution': 'Let her previous monthly income be p\nThe cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5\nHer income was increased by $600 so it is now p+$600\nThe cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4\nEquating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4\nMultiplying both sides of the equation by 20 gives 8p = 5p+$3000\nSubtracting 5p from both sides gives: 3p = $3000\nDividing both sides by 3 gives p = $1000', 'answer': 'okay, got it, then?'}`
+
+
+Answer analyzes triggered::::::::::::::: Remenber, you will never directly tell student the answer unless student figure it out themselves. Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+Answer analyzes triggered::::::::::::::: Let her previous monthly income be p
+The cost of her rent and utilities was 40 percent of p which is (40/100)*p = 2p/5
+Her income was increased by $600 so it is now p+$600
+The cost of her rent and utilities now amount to 25 percent of (p+$600) which is (25/100)*(p+$600) = (p+$600)/4
+Equating both expressions for cost of rent and utilities: 2p/5 = (p+$600)/4
+Multiplying both sides of the equation by 20 gives 8p = 5p+$3000
+Subtracting 5p from both sides gives: 3p = $3000
+Dividing both sides by 3 gives p = $1000
+Answer analyzes triggered::::::::::::::: okay, got it, then?
+
+Reach exception_to_messages +++++++++++++++++++++++++
+Here are the exception object *****&&&&&&&&&&&&&&&*******Failed to parse Eval_Output from completion {'Correct': 'False', 'Minor_Mistake': 'False', 'Conceptual_Mistake': 'True'}. Got: 2 validation errors for Eval_Output
+Logical_Mistake
+  field required (type=value_error.missing)
+Reasoning
+  field required (type=value_error.missing)*****&&&&&&&&&&&&&&&*******
+answer_tool get back results:  instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'
+instruction='User did it right. Congrats the user!' mistake_kind='None' reasoning='None'You're on the right track! Great work! If you have any more questions or need further assistance with anything else, feel free to ask. Keep it up!
+
+> Finished chain.
+None
+
+

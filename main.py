@@ -32,14 +32,12 @@ if __name__ == '__main__':
     print(SAMPLEQUESTION1)
 
     # Multi agent invoke test case
-    # multi_agent = studiagent.initialize_main_agent()
-    # r = chat_script.test2(agent_executor=multi_agent)
-
-
+    multi_agent = studiagent.initialize_main_agent()
+    r = chat_script.test9(agent_executor=multi_agent)
 
     # Single_agent
-    single_agent = studiagent.create_simple_agent()
-    r = chat_script_simple.test1(single_agent)
+    #single_agent = studiagent.create_simple_agent()
+    #r = chat_script_simple.test8(single_agent)
     print(r)
     
     # Prompt Question
