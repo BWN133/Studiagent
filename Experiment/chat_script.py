@@ -360,14 +360,33 @@ def test9(agent_executor: RunnableWithMessageHistory):
     )
 
 
-# output quality tets
+# output quality tests
 def test10(agent_executor: RunnableWithMessageHistory):
     error = 0
     for i,qa in enumerate(SAMPLELIST):
         try:
-            agent_executor.invoke(
+            o =agent_executor.invoke(
                 {
                     "input": INCORRECTANSWERLIST[i],
+                    "question":qa['question'],
+                    "solution":qa['answer']
+                },
+                {"configurable": {"session_id": "unused"}},
+            )
+            print(o)
+        except:
+            error += 1
+            print("Encounter error number: ", error)
+    return error
+
+# Output quality tests
+def test11(agent_executor: RunnableWithMessageHistory):
+    error = 0
+    for i,qa in enumerate(WRONGANSWER20):
+        try:
+            agent_executor.invoke(
+                {
+                    "input": qa["Incorrect Answer"],
                     "question":qa['question'],
                     "solution":qa['answer']
                 },

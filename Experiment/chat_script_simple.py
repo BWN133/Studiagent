@@ -317,3 +317,18 @@ def test9(agent_executor):
         {"messages": demo_ephemeral_chat_history.messages, 'question': SAMPLEQUESTION1, 'solution': SAMPLESOLUTION1}
     )
     print(ai_r2)
+
+
+def test10(agent_executor):
+    error = 0
+    demo_ephemeral_chat_history = ChatMessageHistory()
+    for i,qa in enumerate(SAMPLELIST):
+        demo_ephemeral_chat_history.add_user_message(INCORRECTANSWERLIST[i])
+        try:
+            o = agent_executor.invoke({"messages": demo_ephemeral_chat_history.messages, 'question': qa['question'], 'solution':qa['answer']})
+            demo_ephemeral_chat_history.add_ai_message(o)
+            print(o)
+        except:
+            error += 1
+            print("Encounter error number: ", error)
+    return error
