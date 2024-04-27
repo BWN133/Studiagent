@@ -1,6 +1,8 @@
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from config import *
 
+
+# GPT-3.5 vs. GPT-4 Tool Invocation Experiment
 def test1(agent_executor:RunnableWithMessageHistory):
     agent_executor.invoke(
         {
@@ -29,14 +31,6 @@ def test1(agent_executor:RunnableWithMessageHistory):
         {"configurable": {"session_id": "unused"}},
     )
     
-    agent_executor.invoke(
-        {
-            "input": "Uh ok, I will get back to work then",
-            "question": SAMPLEQUESTION1,
-            "solution": SAMPLESOLUTION1
-        },
-        {"configurable": {"session_id": "unused"}},
-    )
     
     agent_executor.invoke(
         {
@@ -46,6 +40,33 @@ def test1(agent_executor:RunnableWithMessageHistory):
         },
         {"configurable": {"session_id": "unused"}},
     )
+    agent_executor.invoke(
+        {
+            "input": "What is an airbag?",
+            "question": SAMPLEQUESTION1,
+            "solution": SAMPLESOLUTION1
+        },
+        {"configurable": {"session_id": "unused"}},
+    )
+    agent_executor.invoke(
+        {
+            "input": "Should we utilize her original income in this question?",
+            "question": SAMPLEQUESTION1,
+            "solution": SAMPLESOLUTION1
+        },
+        {"configurable": {"session_id": "unused"}},
+    )
+    agent_executor.invoke(
+        {
+            "input": "So I guess her original income is x, then the rent and utility will cost her 0.25 x?",
+            "question": SAMPLEQUESTION1,
+            "solution": SAMPLESOLUTION1
+        },
+        {"configurable": {"session_id": "unused"}},
+    )
+
+
+
 
 def test2(agent_executor:RunnableWithMessageHistory):
     agent_executor.invoke(
@@ -246,14 +267,6 @@ def test6(agent_executor: RunnableWithMessageHistory):
         {"configurable": {"session_id": "unused"}},
     )
 
-    agent_executor.invoke(
-        {
-            "input": "great",
-            "question": SAMPLEQUESTION1,
-            "solution": SAMPLESOLUTION1
-        },
-        {"configurable": {"session_id": "unused"}},
-    )
 
 
 
@@ -345,3 +358,22 @@ def test9(agent_executor: RunnableWithMessageHistory):
         },
         {"configurable": {"session_id": "unused"}},
     )
+
+
+# output quality tets
+def test10(agent_executor: RunnableWithMessageHistory):
+    error = 0
+    for i,qa in enumerate(SAMPLELIST):
+        try:
+            agent_executor.invoke(
+                {
+                    "input": INCORRECTANSWERLIST[i],
+                    "question":qa['question'],
+                    "solution":qa['answer']
+                },
+                {"configurable": {"session_id": "unused"}},
+            )
+        except:
+            error += 1
+            print("Encounter error number: ", error)
+    return error

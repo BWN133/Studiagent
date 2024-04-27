@@ -80,7 +80,7 @@ def eval(question: str, solution:str, answer: str) -> str:
             "You will be provided with a question, the solution, and user's approach"
             "Output only one dictionary like the following: {output_example}"
             "Remember to use double quote \" for key values"
-            "please include all fields mentioned above "
+            "please include all fields: Correct, Minor_Mistake,Conceptual_Mistake,Logical_Mistake,Reasoning "
             "Input question will be encapsulated in deliminator $$$$$"
             "Solution to input question will be encapsulated in deliminator ~~~~~"
             "User's Input will be encapsulated in deliminator +++++"
@@ -135,3 +135,7 @@ def answer_analysis_tool(question: str, solution:str, answer: str) -> str:
     else:
         return schema.AnswerAnalysisOutput(instruction="User did it right. Congrats the user!",mistake_kind="None",reasoning="None")
     
+
+def print_question_recieved(question: str, solution: str, answer:str) -> str:
+    """This function will accepts question and print out question recieved"""
+    return schema.Question_Output(question=question)

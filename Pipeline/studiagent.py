@@ -61,6 +61,7 @@ def initialize_main_agent() -> RunnableWithMessageHistory:
                 "system"
                 "You are a math You are a math teacher and trying to teach student how to solve the following question"
                 "Remenber, you will never directly tell student the answer unless student figure it out themselves"
+                "Even if user are stuck, only provide them hint to the next step"
                 "{question}"
                 "The solution of the question is"
                 "{solution}"
@@ -105,6 +106,64 @@ def initialize_main_agent() -> RunnableWithMessageHistory:
     )
     return conversational_agent_executor
 
+def initialize_main_extra_mission_agent() -> RunnableWithMessageHistory:
+    # model = ChatOpenAI(model="gpt-3.5-turbo-1106")
+
+    prompt = ChatPromptTemplate.from_messages(
+        [
+            (
+                "system"
+                "You are a math You are a math teacher and trying to teach student how to solve the following question"
+                "Remenber, you will never directly tell student the answer unless student figure it out themselves"
+                "{question}"
+                "The solution of the question is"
+                "{solution}"
+                "You will be provided with userinput and chat history"
+                "Firstly, Decide if the input is a question, a partial answer, a complete answer, or others."
+                "If it is a question, firstly identify whether it is a question about problem provided."
+                "If yes, answer the question"
+                "If No , ask the user to stay concetrate."
+                "If a partial answer, only tell whether the step is correct. If yes, prompt them a little hint of next step intead of telling them the correct answer. If user is wrong, provide them hint about how to solve the current step. "
+                "If the response is an complete answer."
+                "Invoke answer_analyzer tool which will provide you the exact instruction on how to deal with each situation"
+                "Other than that, Chat normally as long as it is related to the problem and don't directly output the question"
+            ),
+            MessagesPlaceholder(variable_name="chat_history"),
+            ("human", "{input}"),
+            MessagesPlaceholder(variable_name="agent_scratchpad"),
+        ]
+    )
+
+
+    answerAnalyzer = StructuredTool.from_function(
+        func=toolset.answer_analysis_tool_wrapper,
+        name="answer_analyzer",
+        description="Only Trigger this when user provides you a complete answer including result to a question. Evaluate user's input based on question description and correct solution and provide instruction on how to guide student",
+        args_schema=schema.EvalDiffInput
+    )
+    question_recieved = StructuredTool.from_function(
+        func=toolset.answer_analysis_tool_wrapper,
+        name="question_recieved",
+        description="This function will accepts question and print out question recieved",
+        args_schema=schema.EvalDiffInput
+    )
+    tool_list = [answerAnalyzer,question_recieved]
+
+
+    agent = create_openai_tools_agent(model, tool_list, prompt)
+
+    agent_executor = AgentExecutor(agent=agent, tools=tool_list, verbose=True)
+
+    demo_ephemeral_chat_history_for_chain = ChatMessageHistory()
+
+    conversational_agent_executor = RunnableWithMessageHistory(
+        agent_executor,
+        lambda session_id: demo_ephemeral_chat_history_for_chain,
+        input_messages_key="input",
+        output_messages_key="output",
+        history_messages_key="chat_history",
+    )
+    return conversational_agent_executor
 
     # conversational_agent_executor.invoke(
     # {
