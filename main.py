@@ -32,13 +32,25 @@ if __name__ == '__main__':
     print(SAMPLEQUESTION1)
 
     # Multi agent invoke test case
-    multi_agent = studiagent.initialize_main_agent()
-    r = chat_script.test10(agent_executor=multi_agent)
+    # multi_agent = studiagent.initialize_main_agent()
+    # r = chat_script.test10(agent_executor=multi_agent)
+    
+
+    # Multi tool agent invoke test case
+    # multi_tool_agent = studiagent.initialize_main_extra_mission_agent()
+    # r = chat_script.test12(multi_tool_agent)
+    # print(r)
+
+
+    # Simplified tool choice experiment
+    # simp_tool_c = studiagent.initialize_tool_choice_agent()
+    # r = chat_script.test13(agent_executor=simp_tool_c)
+    # print(r)
     
     # Single_agent
-    # single_agent = studiagent.create_simple_agent()
-    # r = chat_script_simple.test10(single_agent)
-    # print(r)
+    single_agent = studiagent.create_simple_agent()
+    r = chat_script_simple.test11(single_agent)
+    print(r)
     
     # Prompt Question
     # recieve answer judge whether complete. If the result is correct incorrect, static print

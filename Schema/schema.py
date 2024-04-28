@@ -39,3 +39,8 @@ class AnswerAnalysisOutput(BaseModel):
 class Question_Output(BaseModel):
     """Output format to print the question again"""
     question:str  = Field(..., description="The question itself")
+
+
+class Experiment_Input(BaseModel):
+    """Input format"""
+    input: str = Field(..., description="User's current message that invoke this function")

@@ -4,7 +4,7 @@ from langchain.agents import AgentExecutor, create_openai_tools_agent
 import getpass
 import os
 from langchain_community.tools.tavily_search import TavilySearchResults
-from langchain.tools.base import StructuredTool
+from langchain.tools.base import StructuredTool, tool
 from langchain_openai import ChatOpenAI
 from Tools import toolset
 from Schema import schema
@@ -13,7 +13,7 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from config import *
 from dotenv import load_dotenv
 load_dotenv()
-model = ChatOpenAI(model = GPT3)
+model = ChatOpenAI(model = GPT4)
 def create_simple_agent():
     # Initialize the model
     
@@ -61,6 +61,7 @@ def initialize_main_agent() -> RunnableWithMessageHistory:
                 "system"
                 "You are a math You are a math teacher and trying to teach student how to solve the following question"
                 "Remenber, you will never directly tell student the answer unless student figure it out themselves"
+                "You should only count them actually input the answer as figuring out. If they don't provide any thought but claim that they understood, ask for their reasoning."
                 "Even if user are stuck, only provide them hint to the next step"
                 "{question}"
                 "The solution of the question is"
@@ -123,6 +124,7 @@ def initialize_main_extra_mission_agent() -> RunnableWithMessageHistory:
                 "If it is a question, firstly identify whether it is a question about problem provided."
                 "If yes, answer the question"
                 "If No , ask the user to stay concetrate."
+                "If user ask you to repeat the question again, always invoke question_recieved to print out the question"
                 "If a partial answer, only tell whether the step is correct. If yes, prompt them a little hint of next step intead of telling them the correct answer. If user is wrong, provide them hint about how to solve the current step. "
                 "If the response is an complete answer."
                 "Invoke answer_analyzer tool which will provide you the exact instruction on how to deal with each situation"
@@ -142,10 +144,10 @@ def initialize_main_extra_mission_agent() -> RunnableWithMessageHistory:
         args_schema=schema.EvalDiffInput
     )
     question_recieved = StructuredTool.from_function(
-        func=toolset.answer_analysis_tool_wrapper,
+        func=toolset.print_question_recieved,
         name="question_recieved",
         description="This function will accepts question and print out question recieved",
-        args_schema=schema.EvalDiffInput
+        args_schema=schema.Question_Output
     )
     tool_list = [answerAnalyzer,question_recieved]
 
@@ -165,13 +167,51 @@ def initialize_main_extra_mission_agent() -> RunnableWithMessageHistory:
     )
     return conversational_agent_executor
 
-    # conversational_agent_executor.invoke(
-    # {
-    #     "input": "Okay so I guess the cost is 40 percent of p which is (40/100)*p = 2p/5? am I correct?",
-    #     "question": SAMPLEQUESTION1,
-    #     "solution": SAMPLESOLUTION1
-    # },
-    # {"configurable": {"session_id": "unused"}},
-    # )
 
+@tool("A", args_schema=schema.Experiment_Input)
+def A(input: str) -> str:
+    """Function A"""
+    print("Invoked function A!!!!!!!!!!!!!!!")
+    print("input is: ", input)
+    return "success and stop"
+
+@tool("B", args_schema=schema.Experiment_Input)
+def B(input: str) -> str:
+    """Function B"""
+    print("Invoked function B...............")
+    print("input is: ", input)
+    return "success and stop"
+
+def initialize_tool_choice_agent() -> RunnableWithMessageHistory:
+    # model = ChatOpenAI(model="gpt-3.5-turbo-1106")
+
+    prompt = ChatPromptTemplate.from_messages(
+        [
+            (
+                "system"
+                "You are a tool agent provided with tools A and tools B"
+                "You will be provide some user input to tell you which function to invoke"
+            ),
+            MessagesPlaceholder(variable_name="chat_history"),
+            ("human", "{input}"),
+            MessagesPlaceholder(variable_name="agent_scratchpad"),
+        ]
+    )
+    tool_list = [A,B]
+
+
+    agent = create_openai_tools_agent(model, tool_list, prompt)
+
+    agent_executor = AgentExecutor(agent=agent, tools=tool_list, verbose=True)
+
+    demo_ephemeral_chat_history_for_chain = ChatMessageHistory()
+
+    conversational_agent_executor = RunnableWithMessageHistory(
+        agent_executor,
+        lambda session_id: demo_ephemeral_chat_history_for_chain,
+        input_messages_key="input",
+        output_messages_key="output",
+        history_messages_key="chat_history",
+    )
+    return conversational_agent_executor
 

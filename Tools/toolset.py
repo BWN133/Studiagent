@@ -136,6 +136,9 @@ def answer_analysis_tool(question: str, solution:str, answer: str) -> str:
         return schema.AnswerAnalysisOutput(instruction="User did it right. Congrats the user!",mistake_kind="None",reasoning="None")
     
 
-def print_question_recieved(question: str, solution: str, answer:str) -> str:
+def print_question_recieved(question: str) -> str:
     """This function will accepts question and print out question recieved"""
-    return schema.Question_Output(question=question)
+    print("+++++++++++++++++++++++++++++++++++++++++++++++")
+    print("print_question_recieved with question")
+    print(question)
+    print("+++++++++++++++++++++++++++++++++++++++++++++++")
