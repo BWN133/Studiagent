@@ -40,3 +40,8 @@ We welcome contributions to the Studiagent project. Please contact me if interes
 Cobbe, K., Kosaraju, V., Klimov, O., Schulman, J., Hilton,
 J., & Hausknecht, M. (2021). Training verifiers to solve
 math word problems. arXiv preprint arXiv:2110.14168
+
+Yang, B. (n.d.). SELF-FILTER. https://github
+.com/BWN133/SELF-FILTER. (Accessed on April
+27, 2024)
+
