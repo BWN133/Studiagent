@@ -35,7 +35,7 @@ SAMPLE8 = {"question": "Sally has realized she did not receive a full wage this 
 IA7 = "300 - 420 = -120 $. She owe her boss"
 
 SAMPLE9 = {"question": "Mike's teacher, leaves as homework the reading of a 200-page book. The assignment is to be completed within 30 days. Mike plans to read 10 pages a day. How many days before the deadline will Mike finish his reading?", "answer": "Reading 10 pages per day, Mike finishes reading his book in 200 \u00f7 10 = <<200/10=20>>20 days.\nMike finishes reading his book 30 - 20 = <<30-20=10>>10 days before the deadline.\n#### 10"}
-IA8 = "Reading 10 pages per day, Mike finishes reading his book in 200/10=20 days.\nMike finishes reading his book 31 - 20 = 11 days before the deadline.\n#### 10"
+IA8 = "Reading 10 pages per day, Mike finishes reading his book in 200/10=20 days.\nMike finishes reading his book 31 - 20 = 10 days before the deadline."
 
 
 SAMPLE10 = {"question": "A pound of almonds costs $10 while a pound of walnuts costs $15. How much more does it cost for a mixture of 1/2 pound almonds and 1/3 pound walnuts than a mixture of 1/5 pound almonds and 1/3 pound walnuts?", "answer": "One-half pound of almonds cost $10/2 = $<<10/2=5>>5.\nOne-fifth pound of almonds cost $10/5 = $<<10/5=2>>2.\nA one-third pound of walnuts costs $15/3 = $<<15/3=5>>5.\nSo, 1/2 pound almonds and 1/3 pound walnuts cost $5 + $5 = $10.\nAnd 1/5 pound almonds and 1/3 pound walnuts cost $2 + $5 = $7.\nTherefore, 1/2 pound almonds and 1/3 pound walnuts cost $10 - $7 = $3 more than a mixture of 1/5 pound almonds and 1/3 pound walnuts.\n#### 3"}

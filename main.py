@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
     # Multi agent invoke test case
     # multi_agent = studiagent.initialize_main_agent()
-    # r = chat_script.test10(agent_executor=multi_agent)
+    # r = chat_script.test11(agent_executor=multi_agent)
     
 
     # Multi tool agent invoke test case
@@ -49,7 +49,7 @@ if __name__ == '__main__':
     
     # Single_agent
     single_agent = studiagent.create_simple_agent()
-    r = chat_script_simple.test11(single_agent)
+    r = chat_script_simple.test10(single_agent)
     print(r)
     
     # Prompt Question

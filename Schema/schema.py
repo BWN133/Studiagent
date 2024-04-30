@@ -11,6 +11,11 @@ class Eval_Output(BaseModel):
     Reasoning: str = Field(..., description="Why you categorize the user's mistake in such category")
 
 
+class simplified_eval_Output(BaseModel):
+    """Output format for each input math word problem mistake analysis"""
+    Error:str = Field(..., description="True if user answered wrong. Have type Minor_Mistake, Conceptual_mistake, Logical Mistake")
+    Reasoning:str = Field(..., description="Why you categorize the user's mistake in such category")
+
 class EvalDiffInput(BaseModel):
     question: str = Field(description="Description of a math problem")
     solution: str = Field(description="Correct solution with complete explaination to input question")

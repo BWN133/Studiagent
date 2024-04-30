@@ -1,0 +1,12 @@
+Mrs. Snyder used to spend 40 percent of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25 percent of her monthly income. How much was her previous monthly income?
+content="Great job! It looks like you understand the process of calculating the total earnings from selling the candles. Now, let's consider the cost of supplies. Do you know how much the supplies cost in total?"
+content="You are on the right track! It seems like there's a small mistake in your calculation. Let's recheck the total grams of protein John gets per day and then per week. Keep going!"
+content="It looks like there's a small error in your calculation. Double-check the cost of the baseballs and basketballs, and then calculate the difference again. Keep trying!"
+content="It seems like there's a small mistake in the calculation of the raise and the bonus. Let's re-calculate the raise and bonus separately and then add them up to get the correct total annual salary. Keep going!"
+content="That's correct! Steve's wife is indeed 64 years old. Now, can you figure out the age of their son? Keep going!"
+content="It looks like there's a small mistake in your calculation. Can you re-calculate the total distance biked by Alisa and Stanley and double-check your math? Keep going!"
+content='It looks like there might be a mistake in the calculation. Take another look at the subtraction and see if you get a different result. Remember to consider the context of the question. Keep going!'
+content="It seems like there's a small mistake in the calculation of how many days before the deadline Mike finishes reading the book. Can you re-calculate the number of days before the deadline? Remember the total number of days given in the question. Keep going!"
+content='It looks like there might be a mistake in the calculation. Double check each term of the expression and ensure that the operations are carried out correctly. Keep going!'
+content="It seems like there's a small mistake in your final calculation. Double-check the calculation for the number of sheep remaining on the farm. Keep going!"
+0
